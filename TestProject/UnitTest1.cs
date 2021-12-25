@@ -92,25 +92,25 @@ namespace TestProject
         }
 
         [Fact]
-        public void Delimiter_Of_Any_Lenght()
+        public void Delimiters_Of_Any_Lenght()
         {
             CalculateString("//[***]\n1***2***3", 6);
         }
 
         [Fact]
-        public void Multiple_Delimiter_Of_Any_Lenght()
+        public void Multiple_Delimiters_Of_Any_Lenght()
         {
             CalculateString("//[*][%]\n1*2%3", 6);
         }
 
         [Fact]
-        public void Multiple_Delimiter_Of_Multiple_Lenght()
+        public void Multiple_Delimiters_Of_Multiple_Lenght()
         {
             CalculateString("//[**][%%]\n1**2%%3", 6);
         }
 
         [Fact]
-        public void Multiple_Delimiter_Yest()
+        public void Multiple_Delimiters()
         {
             var delimiters = StringCalc.GetMultipleDelimiters("//[*][%]\n1*2%3");
             Assert.Contains("*", delimiters);
